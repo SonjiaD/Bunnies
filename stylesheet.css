@@ -1,8 +1,10 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 nav {
     display: flex;
@@ -33,4 +35,11 @@ nav {
     padding: 10px 15px;
     display: block;
     transition: background-color 0.3s ease;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    letter-spacing: 0.5px;
+    height: 80%;
 }
