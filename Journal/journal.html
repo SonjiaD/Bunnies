@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
 <html lang="en">
+<head>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
 <body>
-<h1>
-    My Journal
-</h1>
+    <div id="afterLogin-placeholder"></div>
+    <script>
+        $(document).ready(function() {
+            $("#afterLogin-placeholder").load("../navigationBars/afterLogin.html");
+        });
+    </script>
+    <h3>
+        Add Entry
+    </h3>
 
-<h3>
-    Add Entry
-</h3>
+    <form onsubmit=addJournalEntry(event)>
+        <textarea id="newJournalEntry" name="newJournalEntry" rows="4" cols="50" placeholder="How are you feeling?"></textarea>
+        <br>
+        <input type="submit" value="Add">
+    </form>  
 
-<form onsubmit=addJournalEntry(event)>
-    <textarea id="newJournalEntry" name="newJournalEntry" rows="4" cols="50" placeholder="How are you feeling?"></textarea>
-    <br>
-    <input type="submit" value="Add">
-</form>  
-
-<h3>
-    Previous entries
-</h3>
-<ul id="previousEntries"></ul>
-<script src="journal.js"></script>
-
-
+    <h3>
+        Previous entries
+    </h3>
+    <ul id="previousEntries"></ul>
+    <script src="journal.js"></script>
 </body>
 </html>
