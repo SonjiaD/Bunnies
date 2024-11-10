@@ -4,3 +4,39 @@
     display: block;
     text-align: center;
 }
+
+.loginButton {
+    font-family: 'Manrope';
+    font-size: 15px;
+    color: white;
+    position: center;
+
+    
+    background: #BEB8F4;
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    border-color: white;
+    display: block;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.logo {
+    color: black;
+    float: left;
+    display: block;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.bunnyImage{
+    width: 200px;
+}
+
