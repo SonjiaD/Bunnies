@@ -40,12 +40,6 @@
     height: 100%;
 }
 
-img {
-    width: 50px;
-    vertical-align: middle;
-    border-style: none;
-    border-radius: 100%;
-}
 
 .msg-header {
     width: 100%;
@@ -59,6 +53,10 @@ img {
 }
 
 .msgimg {
+    width: 50px;
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 100%;
     margin-left: 2%;
     float: left;
 }

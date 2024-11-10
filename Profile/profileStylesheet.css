@@ -1,4 +1,10 @@
-body, .text, p {
+body {
+    background: linear-gradient(to bottom, #ECE0F5, #F9E0E9);
+    height: 100vh;
+    margin: 0;
+}
+
+.text, p {
     font-family: 'Poppins', sans-serif;
 }
 
