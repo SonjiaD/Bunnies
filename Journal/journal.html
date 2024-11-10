@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<body>
+<h1>
+    My Journal
+</h1>
+
+<h3>
+    Add Entry
+</h3>
+
+<form onsubmit=addJournalEntry(event)>
+    <textarea id="newJournalEntry" name="newJournalEntry" rows="4" cols="50" placeholder="How are you feeling?"></textarea>
+    <br>
+    <input type="submit" value="Add">
+</form>  
+
+<h3>
+    Previous entries
+</h3>
+<ul id="previousEntries"></ul>
+<script src="journal.js"></script>
+
+
+</body>
+</html>
