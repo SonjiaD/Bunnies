@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="messagesheet.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="message.js"></script>
+</head>
+<body>
+  <div id="afterLogin-placeholder"></div>
+    <script>
+        $(document).ready(function() {
+            $("#afterLogin-placeholder").load("navigationBars/afterLogin.html");
+        });
+    </script>
+  <div class="container">
+    
+    <div class="chat-container">
+        <!-- msg-header section starts -->
+        <div class="msg-header">
+          <div class="container1">
+            <img src="user1.png" class="msgimg" />
+            <div class="active">
+              <p>User name</p>
+            </div>
+          </div>
+        </div>
+        <!-- msg-header section ends -->
+  
+        <!-- Chat inbox  -->
+        <div class="chat-page">
+          <div class="msg-inbox">
+            <div class="chats">
+              <!-- Message container -->
+              <div class="msg-page">
+                <!-- Incoming messages -->
+  
+                <div class="received-chats">
+                  <div class="received-chats-img">
+                    <img src="user2.png" />
+                  </div>
+                  <div class="received-msg">
+                    <div class="received-msg-inbox">
+                      <p>
+                        Hey! How's it going? Just wanted to check in :)
+                      </p>
+                      <span class="time">Today 11:55</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Outgoing messages -->
+                <div class="outgoing-chats">
+                  <div class="outgoing-chats-img">
+                    <img src="user1.png" />
+                  </div>
+                  <div class="outgoing-msg">
+                    <div class="outgoing-chats-msg">
+                      <p class="multi-msg">
+                        Oh you know ':) midterms
+                      </p>
+                      <p class="multi-msg">
+                        Wbu? How's your new job?
+                      </p>
+                      <span class="time">Today 1:03</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="received-chats">
+                  <div class="received-chats-img">
+                    <img src="user2.png" />
+                  </div>
+                  <div class="received-msg">
+                    <div class="received-msg-inbox">
+                      <p class="single-msg">
+                        Midterms are the worst! but I'm sure you'll do great.
+                      </p>
+                      <span class="time">Today 2:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- msg-bottom section -->
+  
+            <div class="msg-bottom">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Write message..."
+                />
+  
+                <span class="input-group-text send-icon">
+                  <i class="bi bi-send"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </body>
+</html>

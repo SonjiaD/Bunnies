@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Home</title>
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
 <style>
 body {
@@ -10,6 +11,14 @@ body {
 }
 </style>
 </head>
+<body>
+    <div id="afterLogin-placeholder"></div>
+    <script>
+        $(document).ready(function() {
+            $("#afterLogin-placeholder").load("navigationBars/afterLogin.html");
+        });
+    </script>
+</body>
 <!-- This is our home page -->
 <!-- Seen after logging in-->
 
