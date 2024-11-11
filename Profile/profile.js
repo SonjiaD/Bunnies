@@ -1,4 +1,7 @@
-
+const personalityList = ["Extroverted", "Creative", "Sweet", "Jester"];
+const activitiesList = ["Swimming", "Painting", "Hiking", "PLaying Guitar"];
+const livingList = ["In Dorms", "With Parents"];
+const supportList = ["Find Community", "Study Buddy"];
 
 const editProfile = () => {
     var name = document.getElementById("name");
