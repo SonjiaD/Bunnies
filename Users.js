@@ -99,7 +99,7 @@ const generateFakeUsers = () => {
             "sports, singing, climbing",
             "commuter",
             "make friends, study buddy",
-            "jenna.png"
+            "../images/jenna.jpg"
         ),
         new Users(
             "Alex Choi",
@@ -108,7 +108,7 @@ const generateFakeUsers = () => {
             "board games, reading, hiking",
             "on campus",
             "make friends, study buddy",
-            "alex.png"
+            "../images/alex.jpg"
         ),
         new Users(
             "Maria Hernandez",
@@ -117,7 +117,7 @@ const generateFakeUsers = () => {
             "city exploration, cooking, volunteering",
             "commuter",
             "meet new people, mental health support",
-            "maria.png"
+            "../images/maria.jpg"
         ),
         new Users(
             "Liam Patel",
@@ -126,7 +126,7 @@ const generateFakeUsers = () => {
             "hiking, biking, photography",
             "commuter",
             "social support, find activity buddies",
-            "liam.png"
+            "../images/liam.jpg"
         ),
         new Users(
             "Sarah Lee",
@@ -135,7 +135,7 @@ const generateFakeUsers = () => {
             "music, painting, movies",
             "on campus",
             "make friends, find a study group",
-            "sarah.png"
+            "../images/sarah.png"
         ),
         new Users(
             "Ethan Zhang",
@@ -144,7 +144,7 @@ const generateFakeUsers = () => {
             "gym, cooking, running",
             "on campus",
             "expand social circle, meet like-minded people",
-            "ethan.png"
+            "../images/ethan.png"
         ),
         new Users(
             "Emily Wright",
@@ -153,7 +153,7 @@ const generateFakeUsers = () => {
             "reading, exploring new restaurants, volunteering",
             "commuter",
             "make friends, find a support network",
-            "emily.png"
+            "../images/emily.jpg"
         )
     ];
 };
