@@ -1,42 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 10px;
-}
-.logo {
-    font-size: 24px;
-    
-}
-.nav-links {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-}
 
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links li a {
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.loginButton {
+.loginButtonOne {
     font-family: 'Manrope';
     font-size: 15px;
     color: white;
@@ -50,8 +13,8 @@ nav {
     border-color: white;
     display: block;
     float: right;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-right: 125px;
+    margin-top: 40px;
 }
 
 .logo {
@@ -60,7 +23,8 @@ nav {
     display: block;
     font-size: 20px;
     padding: 20px;
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-left: 100px;
 }
 
 body {
@@ -68,5 +32,89 @@ body {
 }
 
 .bunnyImage{
-    width: 200px;
+    width: 30rem;
+    float: right;
+    display: block;
+    margin-right: 9%;
+}
+
+.motivationalQuote{
+    display: block;
+    float: left;
+    margin-left: 7%;
+    margin-top: 5%;
+    font-size: 50px;
+}
+
+.information{
+    display: block;
+    float:left;
+    font-size: 20px;
+    margin-left: 7%;
+    margin-top: 2%;
+}
+
+.Find{
+    background: none;
+    color: #DCB2C2;
+}
+
+.Share{
+    background: none;
+    color: #DBC2E9;
+}
+
+.Heal{
+    background: none;
+    color: #AFAADE;
+}
+
+.loginButtonTwo {
+    font-family: 'Manrope';
+    font-size: 15px;
+    color: white;
+    position: center;
+
+    
+    background: #BEB8F4;
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    border-color: white;
+    display: block;
+    float: left;
+    margin-left: 7%;
+}
+
+
+.bottomStats{
+    background-color: #BEB8F4;
+    display: flex;
+    width: 100%;
+    height: 150px;
+}
+
+.Users{
+    color: white;
+    display: block;
+    float: left;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.sucessfulMatches{
+    color: white;
+    display: block;
+    margin-left: 35%;
+    margin-top: 20px
+}
+
+.noOfUsers{
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.noOfSuccesfulMatches{
+    font-size: 60px;
+    margin-left: 50px;
 }

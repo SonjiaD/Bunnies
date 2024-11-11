@@ -2,16 +2,12 @@ body, .text, p {
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: white;
-}
-
 h1, h2 {
     font-family: 'Manrope', sans-serif;
 }
 
 .rectangle-container {
-    background-image: url('../images/JournalBackgroundImage.png');
+    background-image: url('../images/profilebg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +20,7 @@ h1, h2 {
 }
 
 .bunny-image {
-    height: 40rem;
+    height: 30rem;
     margin-left: 10%;
 }
 
@@ -56,7 +52,7 @@ h1, h2 {
     margin-left: 1rem;
 }
 
-.icon-description .text {
+.icon-description .text h2 {
     font-size: 18px;
     color: black;
     margin: 0;
@@ -65,7 +61,7 @@ h1, h2 {
 .icon-description .text p {
     font-size: 14px;
     color: black;
-    margin: 0.7rem 0 0;
+    margin: 0.5rem 0 0;
 }
 
 .section {
@@ -77,24 +73,7 @@ h1, h2 {
     margin-right: 5%;
 }
 
-textarea#newJournalEntry {
-    margin-top:1%;
-    width: 100%;
-    height: calc(100% - 40px);
-    background: linear-gradient(to right, #BEB8F4, #F9E0E9);
-    border: none;
-    resize: none;
-    padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: black;
-    outline: none;
-    border-radius: 10px;
-    color: white;
-    margin-bottom:1%;
-}
-
-#addButton {
+.editButton {
     font-size: 15px;
     outline: none;
     color: white;
@@ -103,23 +82,4 @@ textarea#newJournalEntry {
     height: 3rem;
     border-radius: 20px;
     border: none;
-}
-
-#previousEntries {
-    list-style: none;
-    padding: 0;
-}
-
-#previousEntries li {
-    margin: 1rem 0;
-}
-
-.entry-box {
-    border: 1px solid black;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: black;
 }
