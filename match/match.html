@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="match.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script> <!-- Include PapaParse -->
-    <script src="../Users.js"></script>
 </head>
 <body>
     <div id="afterLogin-placeholder"></div>
@@ -19,92 +17,43 @@
         <h1>Find Your Buddy</h1>
     </div>
 
-    <div id="user-list" class="user-list"></div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Generate all users
-            generateFakeUsers();
-
-            // Get the container for user list
-            const userList = document.getElementById('user-list');
-
-            // Display all users
-            allUsers.forEach(user => {
-                const userDetails = user.getUserDetails();
-
-                // Create a card for each user
-                const userCard = document.createElement('div');
-                userCard.className = 'user-card';
-
-                // Add user details
-                const nameElement = document.createElement('h2');
-                nameElement.textContent = userDetails.Name;
-
-                const bioElement = document.createElement('p');
-                bioElement.textContent = userDetails.Bio;
-
-                const personalityElement = document.createElement('p');
-                personalityElement.textContent = `Personality: ${userDetails.Personality}`;
-
-                const activitiesElement = document.createElement('p');
-                activitiesElement.textContent = `Activities: ${userDetails.Activities}`;
-
-                const livingElement = document.createElement('p');
-                livingElement.textContent = `Living: ${userDetails.Living}`;
-
-                const goalsElement = document.createElement('p');
-                goalsElement.textContent = `Goals: ${userDetails.Goals}`;
-
-                // Append elements to the card
-                userCard.appendChild(nameElement);
-                userCard.appendChild(bioElement);
-                userCard.appendChild(personalityElement);
-                userCard.appendChild(activitiesElement);
-                userCard.appendChild(livingElement);
-                userCard.appendChild(goalsElement);
-
-                // Append the card to the user list
-                userList.appendChild(userCard);
-
-                console.log(allUsers);
-            });
-        });
-    </script>
-
     <!-- Matchmaking container -->
     <div class="match-container" id="profile-container">
+        <!-- Profile section with ID for dynamic updates -->
+        
         <!-- Differences Section -->
         <div class="differences-section">
             <h2>Differences</h2>
             <div class="attributes">
                 <div class="attribute">
                     <p>Personality</p>
-                    <span class="tag" id="difference-personality">Loading...</span>
+                    <span class="tag">Introverted</span>
                 </div>
                 <div class="attribute">
                     <p>Activities</p>
-                    <div id="difference-activities"></div>
+                    <span class="tag">Sports</span>
+                    <span class="tag">Singing</span>
+                    <span class="tag">Climbing</span>
                 </div>
                 <div class="attribute">
                     <p>Living Situation</p>
-                    <span class="tag" id="difference-living">Loading...</span>
+                    <span class="tag">Commuter</span>
                 </div>
                 <div class="attribute">
                     <p>Support Goals</p>
-                    <div id="difference-goals"></div>
+                    <span class="tag">Make Friends</span>
                 </div>
             </div>
             <div class="reject-button">
                 <button id="reject-btn">&#10060;</button>
             </div>
         </div>
-
-        <!-- Profile section with ID for dynamic updates -->
         <div class="profile-section active" id="current-profile">
-            <img src="../images/placeholder.jpg" alt="Profile Picture" id="profile-img">
-            <h3 id="profile-name">Loading...</h3>
-            <p id="profile-bio">Loading...</p>
+            <img src="../images/amy.jpg" alt="Jenna MacDonalds">
+            <h3>Jenna MacDonalds</h3>
+            <p>I'm a UBC student in second year who comes from Bangladesh. Some of my hobbies include going to the gym.</p>
         </div>
+
 
         <!-- Similarities Section -->
         <div class="similarities-section">
@@ -112,19 +61,20 @@
             <div class="attributes">
                 <div class="attribute">
                     <p>Activities</p>
-                    <div id="similar-activities"></div>
+                    <span class="tag">Gym</span>
+                    <span class="tag">Swimming</span>
                 </div>
                 <div class="attribute">
                     <p>Personality</p>
-                    <span class="tag" id="similar-personality">Loading...</span>
+                    <span class="tag">Extroverted</span>
                 </div>
                 <div class="attribute">
                     <p>Living Situation</p>
-                    <span class="tag" id="similar-living">Loading...</span>
+                    <span class="tag">On Campus</span>
                 </div>
                 <div class="attribute">
                     <p>Support Goals</p>
-                    <div id="similar-goals"></div>
+                    <span class="tag">Study Buddy</span>
                 </div>
             </div>
             <div class="accept-button">
@@ -133,6 +83,7 @@
         </div>
     </div>
 
+    <ul id="previousEntries"></ul>
     <script src="match.js"></script>
 </body>
 </html>
