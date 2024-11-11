@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.match-main {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.match-main h1 {
+    font-size: 36px;
+}
+
+.match-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjusted to align items to the top */
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.differences-section, .similarities-section {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center; /* Center text */
+    padding-bottom: 100px; /* Add more space at the bottom */
+    width: 10%; /* Adjust this percentage to make it thinner */
+
+}
+
+.differences-section{
+    background-color: #ff8a8a47;
+}
+
+.similarities-section {
+    background-color: #5eb4622e;
+}
+
+
+.profile-section {
+    text-align: center;
+    flex-basis: 300px;
+    background-color: #f8bbd0;
+    background: linear-gradient(to bottom, #DCB2C2, #C1A8D1);
+
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-section h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.attributes {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.attribute {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.attribute p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.tag {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    /* tag background color */
+    color: rgb(13, 11, 11); 
+    /* font color */
+    border-radius: 5px;
+}
+
+.reject-button, .accept-button {
+    position: absolute;
+    bottom: 20px; /* Ensure it is positioned at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.reject-button button, .accept-button button {
+    font-size: 36px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.reject-button button {
+    color: #ff1744;
+}
+
+.accept-button button {
+    color: #00e676;
+}
+
+/* Add transitions for outgoing and incoming profiles */
+.outgoing {
+    animation: swipeOut 0.5s forwards;
+}
+
+.incoming {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: swipeIn 0.5s forwards;
+}
+
+/* Animation for swipe out */
+@keyframes swipeOut {
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Animation for swipe in */
+@keyframes swipeIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

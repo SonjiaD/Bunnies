@@ -18,7 +18,7 @@
         <img src="../images/bunny-profile.png" alt="Profile pic" class="bunny-image">
         <div class="rectangle-content">
             <div class="text">
-                <h2 id="name">Judy Hopps</h2>
+                <h2 id="name" contenteditable="false">Judy Hopps</h2>
             </div>
             <br><br>
             <div>
@@ -47,9 +47,8 @@
                 </div>
                 <br>
                 <br>
-                <form onsubmit=addJournalEntry(event)>
-                    <input id="editButton" type="submit" value="Edit">
-                </form>  
+                <button onclick="editProfile()" class="editButton">Edit</button>
+                <button onclick="saveProfile()" class="editButton">Save</button>
             </div>
         </div>
     </div>

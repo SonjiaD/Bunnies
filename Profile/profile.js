@@ -1,42 +1,21 @@
-const entriesList = document.getElementById('previousEntries');
 
-const getJournalEntries = () => {
-    let journal;
-    if(localStorage.getItem('journal') === null){
-        journal = [];
-    }else {
-        journal = JSON.parse(localStorage.getItem('journal'));
+
+const editProfile = () => {
+    var name = document.getElementById("name");
+    name.contentEditable = true;
+}
+
+const saveProfile = () => {
+    var name = document.getElementById("name");
+    var userName = name.innerHTML;
+    localStorage.setItem('name', userName);
+    name.contentEditable = false; 
+}
+
+const checkEdits = () => {
+    let name = localStorage.getItem('name');
+    if(name != null)
+        document.getElementById("name").innerHTML = name;
     }
-    return journal;
-}
 
-const saveJournalEntry = entry => {
-    const journal = getJournalEntries();
-    journal.push(entry);
-    localStorage.setItem('journal', JSON.stringify(journal));
-}
-
-const addJournalEntry = e => {
-    e.preventDefault();
-    const input = document.getElementById('newJournalEntry');
-
-    saveJournalEntry(input.value);
-    const li = document.createElement('li');
-    li.textContent = input.value;
-    entriesList.appendChild(li);
-
-    input.value = '';
-}
-
-const displayJournalEntries = () => {
-    const journalEntries = getJournalEntries();
-    entriesList.innerHTML = '';
-
-    journalEntries.reverse().forEach((entry) => {
-        const li = document.createElement('li');
-        li.textContent = entry;
-        entriesList.appendChild(li);
-    });
-};
-
-window.onload = displayJournalEntries;
+window.addEventListener('DOMContentLoaded', checkEdits);

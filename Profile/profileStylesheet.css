@@ -73,7 +73,7 @@ h1, h2 {
     margin-right: 5%;
 }
 
-#editButton {
+.editButton {
     font-size: 15px;
     outline: none;
     color: white;
