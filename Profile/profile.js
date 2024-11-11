@@ -1,9 +1,33 @@
-
+const personalityList = ["Extroverted", "Creative", "Sweet", "Jester"];
+const activitiesList = ["Swimming", "Painting", "Hiking", "PLaying Guitar"];
+const livingList = ["In Dorms", "With Parents"];
+const supportList = ["Find Community", "Study Buddy"];
 
 const editProfile = () => {
     var name = document.getElementById("name");
     name.contentEditable = true;
     //addTrait('personality','Shy');
+    //createButton();
+
+    const traits = document.getElementsByClassName('traits');
+    for (let i = 0; i < traits.length; i++) {
+        const elements = traits[i].getElementsByTagName('p');
+        for (let j = 0; j < elements.length; j++) {
+            elements[j].addEventListener('click', function() {
+                elements[j].remove();
+            });
+        }
+    }
+}
+
+function createButton() {
+    const newButton = document.createElement('button');
+    newButton.textContent = '+';
+    newButton.className = 'littleButton';
+    newButton.addEventListener('click', function() {
+        alert('Button clicked!');
+    });
+    document.getElementById('personality').appendChild(newButton);
 }
 
 function addTrait(category, text) {

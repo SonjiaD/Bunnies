@@ -87,6 +87,10 @@ h1, h2 {
     border: none;
 }
 
+.littleButton {
+    font-size: 15px;
+}
+
 .trait {
     border: none;
 }
