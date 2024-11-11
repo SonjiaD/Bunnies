@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="match.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script> <!-- Include PapaParse -->
+    <script src="../Users.js"></script>
 </head>
 <body>
     <div id="afterLogin-placeholder"></div>
@@ -17,6 +18,58 @@
     <div class="match-main">
         <h1>Find Your Buddy</h1>
     </div>
+
+    <div id="user-list" class="user-list"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Generate all users
+            generateFakeUsers();
+
+            // Get the container for user list
+            const userList = document.getElementById('user-list');
+
+            // Display all users
+            allUsers.forEach(user => {
+                const userDetails = user.getUserDetails();
+
+                // Create a card for each user
+                const userCard = document.createElement('div');
+                userCard.className = 'user-card';
+
+                // Add user details
+                const nameElement = document.createElement('h2');
+                nameElement.textContent = userDetails.Name;
+
+                const bioElement = document.createElement('p');
+                bioElement.textContent = userDetails.Bio;
+
+                const personalityElement = document.createElement('p');
+                personalityElement.textContent = `Personality: ${userDetails.Personality}`;
+
+                const activitiesElement = document.createElement('p');
+                activitiesElement.textContent = `Activities: ${userDetails.Activities}`;
+
+                const livingElement = document.createElement('p');
+                livingElement.textContent = `Living: ${userDetails.Living}`;
+
+                const goalsElement = document.createElement('p');
+                goalsElement.textContent = `Goals: ${userDetails.Goals}`;
+
+                // Append elements to the card
+                userCard.appendChild(nameElement);
+                userCard.appendChild(bioElement);
+                userCard.appendChild(personalityElement);
+                userCard.appendChild(activitiesElement);
+                userCard.appendChild(livingElement);
+                userCard.appendChild(goalsElement);
+
+                // Append the card to the user list
+                userList.appendChild(userCard);
+
+                console.log(allUsers);
+            });
+        });
+    </script>
 
     <!-- Matchmaking container -->
     <div class="match-container" id="profile-container">
