@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../beforeLoginHomePage/beforeLoginStyleSheet.css">
+    <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="profileStylesheet.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -15,38 +17,45 @@
         });
     </script>
     <div class="rectangle-container">
-        <img src="../images/bunny-profile.png" alt="Profile pic" class="bunny-image">
+        <img src="../images/bunnyprofile.jpg" alt="Profile pic" class="bunny-image">
         <div class="rectangle-content">
             <div class="text">
                 <h2 id="name" contenteditable="false">Judy Hopps</h2>
             </div>
-            <br><br>
+            <br>
             <div>
                 <div class="icon-description">
                     <div class="text">
                         <h2>Personality</h2>
+                        <div class="traits" id="personality">
+                            <p>Introverted</p>
+                        </div>
                     </div>
                 </div>
-                <br>
                 <div class="icon-description">
                     <div class="text">
                         <h2>Activities</h2>
+                        <div class="traits" id="activities">
+                            <p>Soccer</p>
+                        </div>
                     </div>
                 </div>
-                <br>
                 <div class="icon-description">
                     <div class="text">
                         <h2>Living Situation</h2>
+                        <div class="traits" id="living">
+                            <p>Commuter</p>
+                        </div>
                     </div>
                 </div>
-                <br>
                 <div class="icon-description">
                     <div class="text">
                         <h2>Support Goals</h2>
+                        <div class="traits" id="support">
+                            <p>Make Friends</p>
+                        </div>
                     </div>
                 </div>
-                <br>
-                <br>
                 <button onclick="editProfile()" class="editButton">Edit</button>
                 <button onclick="saveProfile()" class="editButton">Save</button>
             </div>

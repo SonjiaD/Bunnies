@@ -5,6 +5,15 @@
     width: 80%;
     margin: 20px auto;
 }
+
+.profile-pic {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image scales well within the circle */
+  }
+  
+
 /* user list */
 .user-list {
     width: 200px;
@@ -40,6 +49,18 @@
     height: 100%;
 }
 
+.rectangle-container {
+    position: relative; /* Allows positioning of the bunny image within this container */
+    text-align: right; /* Aligns the content inside rectangle-container to the right */
+  }
+  
+  .bunny-image {
+    margin-left: 100px;
+    margin-right: 20px; /* Adds space from the right edge, adjust as needed */
+    width: 1050px; /* Adjust the size as desired */
+    display: inline-block; /* Keeps the image aligned within the text-aligned container */
+  }
+  
 
 .msg-header {
     width: 100%;
@@ -53,7 +74,7 @@
 }
 
 .msgimg {
-    width: 50px;
+    width: 40px;
     vertical-align: middle;
     border-style: none;
     border-radius: 100%;

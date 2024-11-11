@@ -22,9 +22,12 @@ h1, h2 {
 .bunny-image {
     height: 30rem;
     margin-left: 10%;
+    border-radius: 10%;
 }
 
 .rectangle-content {
+    display: flex;
+    flex-direction: column;
     font-size: 24px;
     color: black;
     text-align: left;
@@ -48,8 +51,8 @@ h1, h2 {
 .icon-description .text {
     display: flex;
     flex-direction: column;
+    align-items: normal;
     font-size: 16px;
-    margin-left: 1rem;
 }
 
 .icon-description .text h2 {
@@ -74,6 +77,7 @@ h1, h2 {
 }
 
 .editButton {
+    margin-top: 20px; 
     font-size: 15px;
     outline: none;
     color: white;
@@ -81,5 +85,13 @@ h1, h2 {
     width: 6rem;
     height: 3rem;
     border-radius: 20px;
+    border: none;
+}
+
+.littleButton {
+    font-size: 15px;
+}
+
+.trait {
     border: none;
 }
