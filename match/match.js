@@ -1,74 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // DOM Elements
-    const bunnyList = document.getElementById('bunny-list');
-
-    // Data Storage
-    let allBunnies = [];
-
-    // Fetch and Initialize Data
-    const fetchData = async () => {
-        try {
-            const response = await fetch('bunnies.csv'); // Ensure this points to the correct CSV path
-            if (!response.ok) throw new Error('Network response was not ok');
-            const data = await response.text();
-            
-            // Parse CSV data using PapaParse
-            const parsedData = Papa.parse(data, { header: true }).data;
-            
-            // Filtering out empty rows if necessary
-            allBunnies = parsedData.filter(bunny => bunny['Name']); // Adjust as per the exact 'Name' header
-
-            displayBunnies(allBunnies);
-        } catch (error) {
-            console.error('Error fetching or parsing the CSV file:', error);
-        }
-    };
-
-    // Display Bunny Profiles
-    const displayBunnies = (bunnies) => {
-        const fragment = document.createDocumentFragment();
-
-        bunnies.forEach(bunny => {
-            const bunnyCard = document.createElement('div');
-            bunnyCard.className = 'bunny-card';
-
-            // Name
-            const nameElement = document.createElement('h3');
-            nameElement.textContent = bunny['Name'];
-            bunnyCard.appendChild(nameElement);
-
-            // Bio
-            const bioElement = document.createElement('p');
-            bioElement.textContent = `Bio: ${bunny['Bio']}`;
-            bunnyCard.appendChild(bioElement);
-
-            // Personality
-            const personalityElement = document.createElement('p');
-            personalityElement.textContent = `Personality: ${bunny['Personality']}`;
-            bunnyCard.appendChild(personalityElement);
-
-            // Activities
-            const activitiesElement = document.createElement('p');
-            activitiesElement.textContent = `Activities: ${bunny['Activities']}`;
-            bunnyCard.appendChild(activitiesElement);
-
-            // Living Situation
-            const livingElement = document.createElement('p');
-            livingElement.textContent = `Living: ${bunny['Living']}`;
-            bunnyCard.appendChild(livingElement);
-
-            // Goals
-            const goalsElement = document.createElement('p');
-            goalsElement.textContent = `Goals: ${bunny['Goals']}`;
-            bunnyCard.appendChild(goalsElement);
-
-            // Add to fragment
-            fragment.appendChild(bunnyCard);
-        });
-
-        bunnyList.innerHTML = '';
-        bunnyList.appendChild(fragment);
-    };
-
-    fetchData();
-});
+// Function to handle profile swipe
+function swipeProfile(action) {
+    const currentProfile = document.getElementById('current-profile');
+    const differencesSection = document.querySelector('.differences-section');
+    const similaritiesSection = document.querySelector('.similarities-section');
+    // Handle the swipe based on action (accept or reject)
+    if (action === 'reject') {
+        currentProfile.classList.add('outgoing'); // swipe out
+        differencesSection.classList.add('active'); // show differences section
+        similaritiesSection.classList.remove('active');
+    } else if (action === 'accept') {
+        currentProfile.classList.add('outgoing');
+        similaritiesSection.classList.add('active'); // show similarities section
+        differencesSection.classList.remove('active');
+    }
+    // Create new profile after swipe
+    setTimeout(() => {
+        currentProfile.remove(); // Remove the old profile
+        // Reset profile for the new one
+        const newProfile = currentProfile.cloneNode(true);
+        newProfile.id = 'current-profile';
+        newProfile.classList.remove('outgoing');
+        newProfile.classList.add('active');
+        
+        const profileContainer = document.getElementById('profile-container');
+        profileContainer.insertBefore(newProfile, similaritiesSection);
+        // Reset differences and similarities sections
+        differencesSection.classList.remove('active');
+        similaritiesSection.classList.remove('active');
+        
+    }, 500); // Match this with your CSS transition duration
+}
+// Add event listeners to accept and reject buttons
+document.getElementById('reject-btn').addEventListener('click', () => swipeProfile('reject'));
+document.getElementById('accept-btn').addEventListener('click', () => swipeProfile('accept'));
