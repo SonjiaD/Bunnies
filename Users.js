@@ -1,4 +1,5 @@
 let allUsers = [];
+let friendsList= [];
 
 // Users Class
 class Users {
