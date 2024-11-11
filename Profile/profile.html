@@ -17,7 +17,9 @@
     <div class="rectangle-container">
         <img src="../images/bunny-profile.png" alt="Profile pic" class="bunny-image">
         <div class="rectangle-content">
-            <h2>Judy Hopps</h2>
+            <div class="text">
+                <h2 id="name">Judy Hopps</h2>
+            </div>
             <br><br>
             <div>
                 <div class="icon-description">
@@ -43,24 +45,14 @@
                         <h2>Support Goals</h2>
                     </div>
                 </div>
+                <br>
+                <br>
+                <form onsubmit=addJournalEntry(event)>
+                    <input id="editButton" type="submit" value="Edit">
+                </form>  
             </div>
         </div>
     </div>
-
-    <h3>
-        Add Entry
-    </h3>
-
-    <form onsubmit=addJournalEntry(event)>
-        <textarea id="newJournalEntry" name="newJournalEntry" rows="4" cols="50" placeholder="How are you feeling?"></textarea>
-        <br>
-        <input type="submit" value="Add">
-    </form>  
-
-    <h3>
-        Previous entries
-    </h3>
-    <ul id="previousEntries"></ul>
     <script src="profile.js"></script>
 </body>
 </html>
