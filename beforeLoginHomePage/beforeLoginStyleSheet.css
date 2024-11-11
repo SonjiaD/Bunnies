@@ -21,8 +21,8 @@
     color: black;
     float: left;
     display: block;
-    font-size: 20px;
-    padding: 20px;
+    font-size: 24px;
+    padding: 15px;
     margin-top: 20px;
     margin-left: 100px;
 }
@@ -35,7 +35,7 @@ body {
     width: 30rem;
     float: right;
     display: block;
-    margin-right: 9%;
+    margin-right: 10%;
 }
 
 .motivationalQuote{
