@@ -165,8 +165,3 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Reject or Accept button not found in the DOM.");
     }
 });
-
-
-import { saveProfile } from '../Profile/profile.js';
-
-window.addEventListener('DOMContentLoaded', saveProfile);
