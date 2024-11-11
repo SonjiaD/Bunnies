@@ -58,10 +58,8 @@ function loadTraits(category) {
         const traits = JSON.parse(savedTraits);
         const personalityDiv = document.getElementById(category);
         
-        // Clear the current content before loading the saved traits
         personalityDiv.innerHTML = '';
         
-        // Add the saved traits back to the personality div
         traits.forEach(trait => {
             const newP = document.createElement('p');
             newP.textContent = trait;
@@ -93,3 +91,4 @@ const checkEdits = () => {
     }
 
 window.addEventListener('DOMContentLoaded', checkEdits);
+window.addEventListener('DOMContentLoaded', saveProfile);
