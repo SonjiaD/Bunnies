@@ -2,6 +2,10 @@ body, .text, p {
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: white;
+}
+
 h1, h2 {
     font-family: 'Manrope', sans-serif;
 }
@@ -52,7 +56,7 @@ h1, h2 {
     margin-left: 1rem;
 }
 
-.icon-description .text h2 {
+.icon-description .text {
     font-size: 18px;
     color: black;
     margin: 0;
@@ -61,5 +65,61 @@ h1, h2 {
 .icon-description .text p {
     font-size: 14px;
     color: black;
-    margin: 0.5rem 0 0;
+    margin: 0.7rem 0 0;
+}
+
+.section {
+    font-size: 24px;
+    color: black;
+    text-align: left;
+    flex: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+textarea#newJournalEntry {
+    margin-top:1%;
+    width: 100%;
+    height: calc(100% - 40px);
+    background: linear-gradient(to right, #BEB8F4, #F9E0E9);
+    border: none;
+    resize: none;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: black;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    margin-bottom:1%;
+}
+
+#addButton {
+    font-size: 15px;
+    outline: none;
+    color: white;
+    background: #F4C8D9;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 20px;
+    border: none;
+}
+
+#previousEntries {
+    list-style: none;
+    padding: 0;
+}
+
+#previousEntries li {
+    margin: 1rem 0;
+}
+
+.entry-box {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: black;
 }

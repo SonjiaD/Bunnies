@@ -40,20 +40,23 @@
         </div>
     </div>
 
-    <h3>
-        Add Entry
-    </h3>
+    <br>
+    <br>
+    <div class="section">
+        <h1>Add Entry</h1>
+        <form onsubmit=addJournalEntry(event)>
+            <textarea id="newJournalEntry" name="newJournalEntry" rows="4" cols="50" placeholder="How are you feeling?"></textarea>
+            <br>
+            <input id="addButton" type="submit" value="Add">
+        </form>  
+    </div>
 
-    <form onsubmit=addJournalEntry(event)>
-        <textarea id="newJournalEntry" name="newJournalEntry" rows="4" cols="50" placeholder="How are you feeling?"></textarea>
-        <br>
-        <input type="submit" value="Add">
-    </form>  
-
-    <h3>
-        Previous entries
-    </h3>
-    <ul id="previousEntries"></ul>
-    <script src="journal.js"></script>
+    <br>
+    <br>
+    <div class="section">
+        <h1>Previous entries</h1>
+        <ul id="previousEntries"></ul>
+        <script src="journal.js"></script>
+    </div>
 </body>
 </html>
