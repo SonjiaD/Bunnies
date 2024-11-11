@@ -101,7 +101,6 @@ const populateProfile = (user) => {
 };
 
 function swipeProfile(action) {
-    console.log('swipe called');
     const currentProfile = document.getElementById("current-profile");
     const differencesSection = document.querySelector(".differences-section");
     const similaritiesSection = document.querySelector(".similarities-section");
