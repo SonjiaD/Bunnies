@@ -3,12 +3,9 @@ const activitiesList = ["Swimming", "Painting", "Hiking", "PLaying Guitar"];
 const livingList = ["In Dorms", "With Parents"];
 const supportList = ["Find Community", "Study Buddy"];
 
-const editProfile = () => {
+function editProfile() {
     var name = document.getElementById("name");
     name.contentEditable = true;
-    //addTrait('personality','Shy');
-    //createButton();
-
     const traits = document.getElementsByClassName('traits');
     for (let i = 0; i < traits.length; i++) {
         const elements = traits[i].getElementsByTagName('p');
@@ -18,17 +15,32 @@ const editProfile = () => {
             });
         }
     }
+    createButton('personality');
+    createButton('activities');
+    createButton('living');
+    createButton('support');
 }
 
-function createButton() {
+function createButton(category) {
     const newButton = document.createElement('button');
     newButton.textContent = '+';
     newButton.className = 'littleButton';
     newButton.addEventListener('click', function() {
-        alert('Button clicked!');
+        var text = "";
+        if (category === "personality") {
+            text = personalityList[Math.floor(Math.random() * personalityList.length)];
+        } else if (category === "activities") {
+            text = activitiesList[Math.floor(Math.random() * activitiesList.length)];
+        } else if (category === "living") {
+            text = livingList[Math.floor(Math.random() * livingList.length)];
+        } else if (category === "support") {
+            text = supportList[Math.floor(Math.random() * supportList.length)];
+        }
+        addTrait(category, text);
     });
-    document.getElementById('personality').appendChild(newButton);
+    document.getElementById(category).appendChild(newButton);
 }
+
 
 function addTrait(category, text) {
     var per = document.getElementById(category);
@@ -92,3 +104,6 @@ const checkEdits = () => {
 
 window.addEventListener('DOMContentLoaded', checkEdits);
 window.addEventListener('DOMContentLoaded', saveProfile);
+
+
+
