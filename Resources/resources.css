@@ -1,0 +1,116 @@
+body, .text, p {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+h1, h2 {
+    font-family: 'Manrope', sans-serif;
+}
+
+.rectangle-container {
+    background-image: url('../images/JournalBackgroundImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.bunny-image {
+    height: 40rem;
+    margin-left: 10%;
+}
+
+.rectangle-content {
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    flex: 1;
+    margin-left: 10%;
+}
+
+.icon-description {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.SelfCare-icon {
+    width: 50px;
+    height: auto;
+}
+
+.section {
+    font-size: 24px;
+    color: black;
+    text-align: left;
+    flex: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+}
+
+.guy-coffee{
+    width: 300px;
+    margin-left: 100px;    
+}
+
+.coffee-hand{
+    width: 300px;
+    margin-left: 200px;
+}
+
+.guy-shoulder{
+    width: 300px;
+    margin-left: 200px;
+}
+
+.organizationsNames{
+    display: flex;
+    margin-top: 20px;
+}
+
+.orgOne{
+    margin-left: 100px;
+}
+
+.orgTwo{
+    margin-left: 270px;
+}
+
+.orgThree{
+    margin-left: 290px;
+}
+
+.orgtexts{
+    display:block;
+    margin-top: 20px;
+}
+
+.org1text{
+    display:block;
+    float:left; 
+}
+
+.articleOne{
+    margin-left: 100px;
+}
+
+.articleTwo{
+    margin-left: 180px;
+}
+
+.articleThree{
+    margin-left: 240px;
+}
+
+
+
