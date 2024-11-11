@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="profileStylesheet.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="afterLogin-placeholder"></div>
+    <script>
+        $(document).ready(function() {
+            $("#afterLogin-placeholder").load("../navigationBars/afterLogin.html");
+        });
+    </script>
+    <div class="rectangle-container">
+        <img src="../images/bunny-profile.png" alt="Profile pic" class="bunny-image">
+        <div class="rectangle-content">
+            <h2>Judy Hopps</h2>
+            <br><br>
+            <div>
+                <div class="icon-description">
+                    <div class="text">
+                        <h2>Personality</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="icon-description">
+                    <div class="text">
+                        <h2>Activities</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="icon-description">
+                    <div class="text">
+                        <h2>Living Situation</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="icon-description">
+                    <div class="text">
+                        <h2>Support Goals</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>
+        Add Entry
+    </h3>
+
+    <form onsubmit=addJournalEntry(event)>
+        <textarea id="newJournalEntry" name="newJournalEntry" rows="4" cols="50" placeholder="How are you feeling?"></textarea>
+        <br>
+        <input type="submit" value="Add">
+    </form>  
+
+    <h3>
+        Previous entries
+    </h3>
+    <ul id="previousEntries"></ul>
+    <script src="profile.js"></script>
+</body>
+</html>

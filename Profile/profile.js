@@ -22,9 +22,8 @@ const addJournalEntry = e => {
 
     saveJournalEntry(input.value);
     const li = document.createElement('li');
-    li.classList.add('entry-box');  
     li.textContent = input.value;
-    entriesList.prepend(li);
+    entriesList.appendChild(li);
 
     input.value = '';
 }
@@ -35,7 +34,6 @@ const displayJournalEntries = () => {
 
     journalEntries.reverse().forEach((entry) => {
         const li = document.createElement('li');
-        li.classList.add('entry-box');  
         li.textContent = entry;
         entriesList.appendChild(li);
     });

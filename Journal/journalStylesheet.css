@@ -1,14 +1,26 @@
+body, .text, p {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+h1, h2 {
+    font-family: 'Manrope', sans-serif;
+}
+
 .rectangle-container {
-    background-color: pink;
+    background-image: url('../images/JournalBackgroundImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 40rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
     margin: 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bunny-image {
@@ -17,12 +29,11 @@
 }
 
 .rectangle-content {
-    font-family: Arial, sans-serif;
     font-size: 24px;
-    color: #333;
+    color: black;
     text-align: left;
     flex: 1;
-    padding-left: 20px;
+    margin-left: 10%;
 }
 
 .icon-description {
@@ -42,16 +53,73 @@
     display: flex;
     flex-direction: column;
     font-size: 16px;
+    margin-left: 1rem;
 }
 
-.icon-description .text h2 {
+.icon-description .text {
     font-size: 18px;
-    color: #333;
+    color: black;
     margin: 0;
 }
 
 .icon-description .text p {
     font-size: 14px;
-    color: #666;
-    margin: 0.25rem 0 0;
+    color: black;
+    margin: 0.7rem 0 0;
+}
+
+.section {
+    font-size: 24px;
+    color: black;
+    text-align: left;
+    flex: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+textarea#newJournalEntry {
+    margin-top:1%;
+    width: 100%;
+    height: calc(100% - 40px);
+    background: linear-gradient(to right, #BEB8F4, #F9E0E9);
+    border: none;
+    resize: none;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: black;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    margin-bottom:1%;
+}
+
+#addButton {
+    font-size: 15px;
+    outline: none;
+    color: white;
+    background: #F4C8D9;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 20px;
+    border: none;
+}
+
+#previousEntries {
+    list-style: none;
+    padding: 0;
+}
+
+#previousEntries li {
+    margin: 1rem 0;
+}
+
+.entry-box {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: black;
 }
