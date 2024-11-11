@@ -88,10 +88,15 @@ body {
 
 
 .bottomStats{
-    background-color: #BEB8F4;
-    display: flex;
-    width: 100%;
-    height: 150px;
+
+        position: fixed; /* Sticks to the viewport, even on scroll */
+        bottom: 0;       /* Positions it exactly at the bottom */
+        left: 0;         /* Optional: aligns it to the left edge of the screen */
+        width: 100%;     /* Optional: full width across the bottom */
+        height: 150px;    /* Set desired height */
+        background-color: #BEB8F4; /* Set desired background color */
+
+      
 }
 
 .Users{
@@ -105,8 +110,8 @@ body {
 .sucessfulMatches{
     color: white;
     display: block;
-    margin-left: 35%;
-    margin-top: 20px
+    margin-left: 60%;
+    margin-top: 20px;
 }
 
 .noOfUsers{
