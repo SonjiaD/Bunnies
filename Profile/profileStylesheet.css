@@ -22,6 +22,7 @@ h1, h2 {
 .bunny-image {
     height: 30rem;
     margin-left: 10%;
+    border-radius: 10%;
 }
 
 .rectangle-content {
