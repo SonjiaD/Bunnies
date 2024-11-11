@@ -80,7 +80,7 @@ function loadTraits(category) {
     }
 }
 
-const saveProfile = () => {
+export const saveProfile = () => {
     var name = document.getElementById("name");
     var userName = name.innerHTML;
     localStorage.setItem('name', userName);
