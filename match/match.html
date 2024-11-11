@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="match.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script> <!-- Include PapaParse -->
 </head>
 <body>
     <div id="afterLogin-placeholder"></div>
@@ -19,41 +20,38 @@
 
     <!-- Matchmaking container -->
     <div class="match-container" id="profile-container">
-        <!-- Profile section with ID for dynamic updates -->
-        
         <!-- Differences Section -->
         <div class="differences-section">
             <h2>Differences</h2>
             <div class="attributes">
                 <div class="attribute">
                     <p>Personality</p>
-                    <span class="tag">Introverted</span>
+                    <span class="tag" id="difference-personality">Loading...</span>
                 </div>
                 <div class="attribute">
                     <p>Activities</p>
-                    <span class="tag">Sports</span>
-                    <span class="tag">Singing</span>
-                    <span class="tag">Climbing</span>
+                    <div id="difference-activities"></div>
                 </div>
                 <div class="attribute">
                     <p>Living Situation</p>
-                    <span class="tag">Commuter</span>
+                    <span class="tag" id="difference-living">Loading...</span>
                 </div>
                 <div class="attribute">
                     <p>Support Goals</p>
-                    <span class="tag">Make Friends</span>
+                    <div id="difference-goals"></div>
                 </div>
             </div>
             <div class="reject-button">
                 <button id="reject-btn">&#10060;</button>
             </div>
         </div>
-        <div class="profile-section active" id="current-profile">
-            <img src="../images/amy.jpg" alt="Jenna MacDonalds">
-            <h3>Jenna MacDonalds</h3>
-            <p>I'm a UBC student in second year who comes from Bangladesh. Some of my hobbies include going to the gym.</p>
-        </div>
 
+        <!-- Profile section with ID for dynamic updates -->
+        <div class="profile-section active" id="current-profile">
+            <img src="../images/placeholder.jpg" alt="Profile Picture" id="profile-img">
+            <h3 id="profile-name">Loading...</h3>
+            <p id="profile-bio">Loading...</p>
+        </div>
 
         <!-- Similarities Section -->
         <div class="similarities-section">
@@ -61,20 +59,19 @@
             <div class="attributes">
                 <div class="attribute">
                     <p>Activities</p>
-                    <span class="tag">Gym</span>
-                    <span class="tag">Swimming</span>
+                    <div id="similar-activities"></div>
                 </div>
                 <div class="attribute">
                     <p>Personality</p>
-                    <span class="tag">Extroverted</span>
+                    <span class="tag" id="similar-personality">Loading...</span>
                 </div>
                 <div class="attribute">
                     <p>Living Situation</p>
-                    <span class="tag">On Campus</span>
+                    <span class="tag" id="similar-living">Loading...</span>
                 </div>
                 <div class="attribute">
                     <p>Support Goals</p>
-                    <span class="tag">Study Buddy</span>
+                    <div id="similar-goals"></div>
                 </div>
             </div>
             <div class="accept-button">
@@ -83,7 +80,6 @@
         </div>
     </div>
 
-    <ul id="previousEntries"></ul>
     <script src="match.js"></script>
 </body>
 </html>
