@@ -1,10 +1,4 @@
-body {
-    background: linear-gradient(to bottom, #ECE0F5, #F9E0E9);
-    height: 100vh;
-    margin: 0;
-}
-
-.text, p {
+body, .text, p {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -13,7 +7,7 @@ h1, h2 {
 }
 
 .rectangle-container {
-    background-image: url('../images/JournalBackgroundImage.png');
+    background-image: url('../images/profilebg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +20,7 @@ h1, h2 {
 }
 
 .bunny-image {
-    height: 40rem;
+    height: 30rem;
     margin-left: 10%;
 }
 
