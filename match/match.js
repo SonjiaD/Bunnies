@@ -1,3 +1,5 @@
+import { saveProfile } from '../Profile/profile.js';
+
 let currentIndex = 0;
 
 // Initialize all users
@@ -154,3 +156,5 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Reject or Accept button not found in the DOM.");
     }
 });
+
+window.addEventListener('DOMContentLoaded', saveProfile);
