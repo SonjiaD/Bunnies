@@ -3,7 +3,7 @@ const activitiesList = ["Swimming", "Painting", "Hiking", "PLaying Guitar"];
 const livingList = ["In Dorms", "With Parents"];
 const supportList = ["Find Community", "Study Buddy"];
 
-const editProfile = () => {
+function editProfile() {
     var name = document.getElementById("name");
     name.contentEditable = true;
     const traits = document.getElementsByClassName('traits');
@@ -80,7 +80,7 @@ function loadTraits(category) {
     }
 }
 
-export const saveProfile = () => {
+const saveProfile = () => {
     var name = document.getElementById("name");
     var userName = name.innerHTML;
     localStorage.setItem('name', userName);
