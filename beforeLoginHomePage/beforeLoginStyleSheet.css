@@ -35,7 +35,7 @@ body {
     width: 30rem;
     float: right;
     display: block;
-    margin-right: 10%;
+    margin-right: 9%;
 }
 
 .motivationalQuote{
@@ -92,4 +92,29 @@ body {
     display: flex;
     width: 100%;
     height: 150px;
+}
+
+.Users{
+    color: white;
+    display: block;
+    float: left;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.sucessfulMatches{
+    color: white;
+    display: block;
+    margin-left: 35%;
+    margin-top: 20px
+}
+
+.noOfUsers{
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.noOfSuccesfulMatches{
+    font-size: 60px;
+    margin-left: 50px;
 }
