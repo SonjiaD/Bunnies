@@ -96,7 +96,7 @@ const generateFakeUsers = () => {
             "Jenna MacDonald",
             "I'm a UBC student in second year who comes from Bangladesh. Some of my hobbies include going to the gym.",
             "Introverted",
-            "Sports, Singing, Climbing",
+            "Sports, Singing, Climbing, Swimming",
             "Commuter",
             "Make friends, Study buddy",
             "../images/jenna.jpg"
@@ -104,17 +104,17 @@ const generateFakeUsers = () => {
         new Users(
             "Alex Choi",
             "I’m a first-year engineering student originally from Toronto. I’m still adjusting to Vancouver and looking to meet people who enjoy chill activities.",
-            "Introverted",
+            "Jester",
             "Board games, Reading, Hiking",
             "On campus",
-            "Make friends, Study buddy",
+            "Make friends, Study buddy, Find community",
             "../images/alex.jpg"
         ),
         new Users(
             "Maria Hernandez",
             "Hi! I’m a fourth-year psychology student. I love exploring the city and chatting over coffee, and I’m hoping to meet some new friends along the way.",
             "Extroverted",
-            "City exploration, Cooking, Volunteering",
+            "City exploration, Cooking, Volunteering, Hiking",
             "Commuter",
             "Meet new people, Mental health support",
             "../images/maria.jpg"
@@ -124,17 +124,17 @@ const generateFakeUsers = () => {
             "I’m a third-year computer science student who’s new to Vancouver. I enjoy outdoor activities on weekends and would love to connect with people who share similar interests.",
             "Ambiverted",
             "Hiking, Biking, Photography",
-            "Commuter",
+            "Commuter, With parents",
             "Social support, Find activity buddies",
             "../images/liam.jpg"
         ),
         new Users(
             "Sarah Lee",
             "I’m a second-year arts student and a night owl. I love music and movies, and I’m hoping to find some people to study with and hang out with.",
-            "Introverted",
+            "Creative",
             "Music, Painting, Movies",
             "On campus",
-            "Make friends, Find a study group",
+            "Make friends, Find a study group, Find community",
             "../images/sarah.png"
         ),
         new Users(
