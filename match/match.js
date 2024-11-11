@@ -2,9 +2,53 @@ let currentIndex = 0;
 
 // Initialize all users
 generateFakeUsers();
-console.log(allUsers);
 
-// Function to populate the initial profile
+const getCurrentUserTraits = () => {
+    return {
+        name: localStorage.getItem("name") || "Default Name",
+        personality: JSON.parse(localStorage.getItem("personalitytraits")) || [],
+        activities: JSON.parse(localStorage.getItem("activitiestraits")) || [],
+        living: JSON.parse(localStorage.getItem("livingtraits")) || [],
+        support: JSON.parse(localStorage.getItem("supporttraits")) || []
+    };
+};
+
+const populateTags = (traitsObject, sectionId) => {
+    const section = document.querySelector(`#${sectionId} .attributes`);
+    if (!section) {
+        console.error(`Section with ID ${sectionId} or its .attributes child not found.`);
+        return;
+    }
+
+    section.innerHTML = ""; // Clear existing tags
+
+    // Iterate over the traits object and create sections
+    for (const [traitType, traits] of Object.entries(traitsObject)) {
+        if (traits.length > 0) {
+            // Create a heading for the trait type
+            const heading = document.createElement("p");
+            heading.textContent = traitType;
+            heading.style.fontWeight = "bold";
+            heading.style.marginBottom = "5px";
+            section.appendChild(heading);
+
+            // Add the tags under the heading
+            traits.forEach(trait => {
+                const tag = document.createElement("span");
+                tag.classList.add("tag");
+                tag.textContent = trait;
+                section.appendChild(tag);
+            });
+
+            // Add spacing after each section
+            const spacing = document.createElement("div");
+            spacing.style.marginBottom = "15px";
+            section.appendChild(spacing);
+        }
+    }
+};
+
+// Update `populateProfile` to pass traits as an object
 const populateProfile = (user) => {
     const currentProfile = document.getElementById("current-profile");
     const profileImg = currentProfile.querySelector("img");
@@ -15,78 +59,45 @@ const populateProfile = (user) => {
     profileImg.alt = user.getName();
     profileName.textContent = user.getName();
     profileBio.textContent = user.getBio();
+
+    // Fetch current user traits
+    const currentUserTraits = getCurrentUserTraits();
+
+    // Calculate similarities and differences
+    const similarities = {
+        Activities: currentUserTraits.activities.filter(trait =>
+            user.getActivities().split(", ").includes(trait)
+        ),
+        Personality: currentUserTraits.personality.filter(trait =>
+            user.getPersonality().split(", ").includes(trait)
+        ),
+        "Living Situation": currentUserTraits.living.filter(trait =>
+            user.getLiving().includes(trait)
+        ),
+        "Support Goals": currentUserTraits.support.filter(trait =>
+            user.getGoals().split(", ").includes(trait)
+        )
+    };
+
+    const differences = {
+        Activities: user.getActivities().split(", ").filter(trait =>
+            !currentUserTraits.activities.includes(trait)
+        ),
+        Personality: user.getPersonality().split(", ").filter(trait =>
+            !currentUserTraits.personality.includes(trait)
+        ),
+        "Living Situation": [user.getLiving()].filter(trait =>
+            !currentUserTraits.living.includes(trait)
+        ),
+        "Support Goals": user.getGoals().split(", ").filter(trait =>
+            !currentUserTraits.support.includes(trait)
+        )
+    };
+
+    // Populate similarities and differences sections
+    populateTags(similarities, "similarities-section");
+    populateTags(differences, "differences-section");
 };
-
-const populateTags = (user) => {
-    // Clear existing tags
-    document.querySelector(".differences-section .attributes").innerHTML = "";
-    document.querySelector(".similarities-section .attributes").innerHTML = "";
-
-    // Differences Section
-    const differencesAttributes = document.querySelector(".differences-section .attributes");
-
-    const personalityDiff = document.createElement("div");
-    personalityDiff.classList.add("attribute");
-    personalityDiff.innerHTML = `<p>Personality</p><span class="tag">${user.getPersonality()}</span>`;
-    differencesAttributes.appendChild(personalityDiff);
-
-    const activitiesDiff = document.createElement("div");
-    activitiesDiff.classList.add("attribute");
-    activitiesDiff.innerHTML = `<p>Activities</p>`;
-    user.getActivities().split(", ").forEach((activity) => {
-        const tag = document.createElement("span");
-        tag.classList.add("tag");
-        tag.textContent = activity;
-        activitiesDiff.appendChild(tag);
-    });
-    differencesAttributes.appendChild(activitiesDiff);
-
-    const livingDiff = document.createElement("div");
-    livingDiff.classList.add("attribute");
-    livingDiff.innerHTML = `<p>Living Situation</p><span class="tag">${user.getLiving()}</span>`;
-    differencesAttributes.appendChild(livingDiff);
-
-    const goalsDiff = document.createElement("div");
-    goalsDiff.classList.add("attribute");
-    goalsDiff.innerHTML = `<p>Support Goals</p>`;
-    user.getGoals().split(", ").forEach((goal) => {
-        const tag = document.createElement("span");
-        tag.classList.add("tag");
-        tag.textContent = goal;
-        goalsDiff.appendChild(tag);
-    });
-    differencesAttributes.appendChild(goalsDiff);
-
-    // Similarities Section (Dummy Example: You can modify this as per your logic)
-    const similaritiesAttributes = document.querySelector(".similarities-section .attributes");
-
-    const personalitySim = document.createElement("div");
-    personalitySim.classList.add("attribute");
-    personalitySim.innerHTML = `<p>Personality</p><span class="tag">Shared Trait</span>`;
-    similaritiesAttributes.appendChild(personalitySim);
-
-    const activitiesSim = document.createElement("div");
-    activitiesSim.classList.add("attribute");
-    activitiesSim.innerHTML = `<p>Activities</p>`;
-    ["Gym", "Hiking"].forEach((activity) => { // Example shared activities
-        const tag = document.createElement("span");
-        tag.classList.add("tag");
-        tag.textContent = activity;
-        activitiesSim.appendChild(tag);
-    });
-    similaritiesAttributes.appendChild(activitiesSim);
-
-    const livingSim = document.createElement("div");
-    livingSim.classList.add("attribute");
-    livingSim.innerHTML = `<p>Living Situation</p><span class="tag">On Campus</span>`;
-    similaritiesAttributes.appendChild(livingSim);
-
-    const goalsSim = document.createElement("div");
-    goalsSim.classList.add("attribute");
-    goalsSim.innerHTML = `<p>Support Goals</p><span class="tag">Study Buddy</span>`;
-    similaritiesAttributes.appendChild(goalsSim);
-};
-
 
 function swipeProfile(action) {
     console.log('swipe called');
