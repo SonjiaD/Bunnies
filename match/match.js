@@ -5,13 +5,14 @@ generateFakeUsers();
 
 const getCurrentUserTraits = () => {
     return {
-        name: localStorage.getItem("name") || "Default Name",
-        personality: JSON.parse(localStorage.getItem("personalitytraits")) || [],
-        activities: JSON.parse(localStorage.getItem("activitiestraits")) || [],
-        living: JSON.parse(localStorage.getItem("livingtraits")) || [],
-        support: JSON.parse(localStorage.getItem("supporttraits")) || []
+        name: localStorage.getItem("name") || "Judy Hopps",
+        personality: JSON.parse(localStorage.getItem("personalitytraits")) || ["Introverted"],
+        activities: JSON.parse(localStorage.getItem("activitiestraits")) || ["Soccer"],
+        living: JSON.parse(localStorage.getItem("livingtraits")) || ["Commuter"],
+        support: JSON.parse(localStorage.getItem("supporttraits")) || ["Make Friends"]
     };
 };
+
 
 const populateTags = (traitsObject, sectionId) => {
     const section = document.querySelector(`#${sectionId} .attributes`);
