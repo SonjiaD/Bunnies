@@ -19,11 +19,7 @@ This project is one of the **winners of Hackcamp 2024**, hosted by **UBC** and *
 ---
 
 ## 📚 Contributors
-- Sonja
-- Sogand
-- Camryn
-- Adil
-
+- Sonja, Sogand, Camryn, Adil
 ---
 
 ## 🌐 Website Description
