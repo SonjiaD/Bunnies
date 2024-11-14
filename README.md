@@ -3,6 +3,10 @@
 ## 🏆 **Winner of Hackcamp 2024** 🏆  
 This project is one of the **winners of Hackcamp 2024**, hosted by **UBC** and **nwplus**. It is recognized as one of the **top projects** among **60 projects** and **267 participants**. 🎉
 
+## 🌍 Explore the Website!
+
+**Live Link**: [Bunnies Website](https://sonjiad.github.io/Bunnies)
+
 ## 📚 Contributors
 - Sonja
 - Sogand
@@ -20,11 +24,6 @@ Inspired by Hackcamp's theme and the challenges many UBC students face, we creat
 - **Matchmaking System**: Students can create a profile highlighting their personality and unique circumstances, then swipe to find others they connect with.
 - **Journaling Tool**: A private space to reflect, track moods, and record experiences, promoting emotional well-being.
 - **Resource Navigation**: Easy access to mental health resources and support available for UBC students.
-
-## 🌍 Explore the Website!
-
-**Live Link**: [Bunnies Website](https://sonjiad.github.io/Bunnies)
-
 ---
 
 ## 🛠️ Built With
