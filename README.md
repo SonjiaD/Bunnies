@@ -1,7 +1,7 @@
 # 🐰 Bunnies: A Mental Health Support Platform for UBC Students 🐰
 
 ## 🏆 **Winner of Hackcamp 2024** 🏆  
-This project is one of the **winners of Hackcamp 2024**, hosted by **UBC** and **nwplus**. It is recognized as one of the **top projects** among **60 projects** and **267 participants**. 🎉
+This project is the **winner of Hackcamp 2024**, hosted by **UBC** and **nwplus**. It is recognized as one of the **top projects** among **60 projects** and **267 participants**. 🎉
 
 ## 🌍 Explore the Website!
 
