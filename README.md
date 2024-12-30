@@ -13,6 +13,7 @@ This project is the **winner of Hackcamp 2024**, hosted by **UBC** and **nwplus*
 
 - **GitHub**: [Bunnies Repo](https://github.com/SonjiaD/Bunnies)
 - **Figma Design**: [Bunnies Prototype](https://www.figma.com/design/wDysn2SOIQ7twZ1MNpfVp6/Dallas-Cowboys-Design-Implementation?node-id=54-2025&node-type=canvas&t=HnIkqW1U1g39PL6D-0)
+- - **Design Case Study**: [Bunnies Presentation](https://www.canva.com/design/DAGanMcP9G8/G0SiEuGgEvy10AFXNid0ow/view?utlId=h81b20cf9b9)
 - **Devpost**: [Project on Devpost](https://devpost.com/software/bunnies?ref_content=user-portfolio&ref_feature=in_progress)
 - **YouTube Presentation**: [Watch Our Demo](https://www.youtube.com/watch?v=tEdpQDUPj14)
 
